@@ -1,8 +1,14 @@
 .bug-filter {
+  display: flex;
   background-color: var(--clr2bg);
+  padding-inline: 20px;
 }
 
 .bug-filter form {
   display: grid;
   grid-template-columns: 100px 200px;
+}
+
+.filter-container {
+  margin-inline-end: 20px;
 }

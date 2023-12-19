@@ -14,7 +14,6 @@ export function BugIndex() {
 
   useEffect(() => {
     loadBugs()
-    // showSuccessMsg('Welcome to bug index!')
   }, [filterBy])
 
   function loadBugs() {
@@ -67,7 +66,7 @@ export function BugIndex() {
     return value === undefined
   }
 
-  const { txt, minSeverity, pageIdx } = filterBy
+  const { txt, minSeverity, sort, labels, pageIdx } = filterBy
 
   if (!bugs) return <div>Loading...</div>
   return (
@@ -80,7 +79,7 @@ export function BugIndex() {
       </section>
 
       <BugFilter
-        filterBy={{ txt, minSeverity }}
+        filterBy={{ txt, minSeverity, sort, labels }}
         onSetFilter={debounceOnSetFilter.current}
       />
       <Link to="/bug/edit">Add Bug</Link>

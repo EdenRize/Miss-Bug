@@ -17,6 +17,8 @@ app.get('/api/bug', (req, res) => {
   const filterBy = {
     txt: req.query.txt || '',
     minSeverity: req.query.minSeverity || 0,
+    sort: req.query.sort,
+    labels: req.query.labels,
     pageIdx: req.query.pageIdx,
   }
 
@@ -31,11 +33,25 @@ app.get('/api/bug', (req, res) => {
     })
 })
 
+// Get Bug (READ)
+app.get('/api/bug/:id', (req, res) => {
+  const bugId = req.params.id
+  bugService
+    .getById(bugId)
+    .then((bug) => res.send(bug))
+    .catch((err) => {
+      loggerService.error('Cannot get bug', err)
+      res.status(400).send('Cannot get bug')
+    })
+})
+
 // Add Bug (CREATE)
 app.post('/api/bug', (req, res) => {
   const bugToSave = {
     title: req.body.title,
     severity: req.body.severity,
+    description: req.body.description,
+    labels: req.body.labels,
   }
 
   bugService
@@ -50,10 +66,12 @@ app.post('/api/bug', (req, res) => {
 // Edit Bug (UPDATE)
 app.put('/api/bug', (req, res) => {
   const bugToSave = {
+    _id: req.body._id,
     title: req.body.title,
     severity: req.body.severity,
     description: req.body.description,
-    _id: req.body._id,
+    labels: req.body.labels,
+    createdAt: req.body.createdAt,
   }
 
   bugService
@@ -62,18 +80,6 @@ app.put('/api/bug', (req, res) => {
     .catch((err) => {
       loggerService.error('Cannot save bug', err)
       res.status(400).send('Cannot save bug')
-    })
-})
-
-// Get Bug (READ)
-app.get('/api/bug/:id', (req, res) => {
-  const bugId = req.params.id
-  bugService
-    .getById(bugId)
-    .then((bug) => res.send(bug))
-    .catch((err) => {
-      loggerService.error('Cannot get bug', err)
-      res.status(400).send('Cannot get bug')
     })
 })
 

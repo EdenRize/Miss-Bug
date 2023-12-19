@@ -14,20 +14,45 @@ const bugs = utilService.readJsonFile('data/bug.json')
 
 function query(filterBy) {
   let bugsToReturn = bugs
+
   if (filterBy.txt) {
     const regExp = new RegExp(filterBy.txt, 'i')
     bugsToReturn = bugsToReturn.filter((bug) => regExp.test(bug.title))
   }
+
   if (filterBy.minSeverity) {
     bugsToReturn = bugsToReturn.filter(
       (bug) => bug.severity >= filterBy.minSeverity
     )
   }
 
+  if (filterBy.labels && filterBy.labels.length > 0) {
+    bugsToReturn = bugsToReturn.filter((bug) =>
+      bug.labels.some((label) => filterBy.labels.includes(label))
+    )
+  }
+
+  if (filterBy.sort) {
+    switch (filterBy.sort) {
+      case 'txt':
+        bugsToReturn.sort((b1, b2) => b1.title.localeCompare(b2.title))
+        break
+
+      case 'severity':
+        bugsToReturn.sort((b1, b2) => b1.severity - b2.severity)
+        break
+
+      case 'createdAt':
+        bugsToReturn.sort((b1, b2) => b2.createdAt - b1.createdAt)
+        break
+    }
+  }
+
   if (filterBy.pageIdx !== undefined) {
     const startIdx = filterBy.pageIdx * PAGE_SIZE
     bugsToReturn = bugsToReturn.slice(startIdx, startIdx + PAGE_SIZE)
   }
+
   return Promise.resolve(bugsToReturn)
 }
 

@@ -4,154 +4,178 @@
       "title": "Cannot save a Car",
       "description": "problem when clicking Save",
       "severity": 3,
-      "createdAt": 1542107359454
+      "createdAt": 1702999864556,
+      "labels": ["critical", "testing-needed"]
     },
     {
       "_id": "55443",
       "title": "cars.map is not a function",
       "description": "problem when cars is not an array",
       "severity": 2,
-      "createdAt": 1542107359454
+      "createdAt": 1702999864556,
+      "labels": ["critical", "testing-needed"]
     },
     {
       "_id": "33322",
       "title": "Cannot find package 'follow-redirects'",
       "description": "problem when not installing an npm library",
       "severity": 1,
-      "createdAt": 1542107359454
+      "createdAt": 1702999864556,
+      "labels": ["critical", "testing-needed"]
     },
     {
       "_id": "777",
       "title": "Each child in a list should have a unique 'key' prop",
       "description": "not giving a key to a list item",
       "severity": 1,
-      "createdAt": 1542107359454
+      "createdAt": 1702999864556,
+      "labels": ["critical", "testing-needed"]
     },
     {
       "_id": "888",
       "title": "Num is not defined",
       "description": "not defining a variable before using it",
       "severity": 1,
-      "createdAt": 1542107359454
+      "createdAt": 1702999864556,
+      "labels": ["security", "testing-needed"]
     },
     {
       "_id": "999",
       "title": "Undefined is not a function",
       "description": "calling a method on an undefined variable",
       "severity": 2,
-      "createdAt": 1542107359454
+      "createdAt": 1702999864556,
+      "labels": ["security"]
     },
     {
       "_id": "1111",
       "title": "Unhandled promise rejection",
       "description": "not handling a promise rejection",
       "severity": 3,
-      "createdAt": 1542107359454
+      "createdAt": 1702999864556,
+      "labels": ["security", "testing-needed"]
     },
     {
       "_id": "1234",
       "title": "SyntaxError: Unexpected token '=>'",
       "description": "using arrow functions in an unsupported environment",
       "severity": 2,
-      "createdAt": 1542107359454
+      "createdAt": 1702999864556,
+      "labels": ["security"]
     },
     {
       "_id": "5678",
       "title": "TypeError: Cannot read property 'length' of null",
       "description": "accessing 'length' property on a null object",
       "severity": 2,
-      "createdAt": 1542107359454
+      "createdAt": 1702999864556,
+      "labels": ["critical", "testing-needed"]
     },
     {
       "_id": "4321",
       "title": "Security vulnerability: XSS",
       "description": "unescaped user input in the HTML causing a potential XSS vulnerability",
       "severity": 3,
-      "createdAt": 1542107359454
+      "createdAt": 1702999864556,
+      "labels": ["critical"]
     },
     {
       "_id": "9876",
       "title": "NetworkError: 404 Not Found",
       "description": "attempting to fetch a resource that doesn't exist",
       "severity": 1,
-      "createdAt": 1542107359454
+      "createdAt": 1702999864556,
+      "labels": ["critical", "testing-needed"]
     },
     {
       "_id": "6543",
       "title": "Maximum call stack size exceeded",
       "description": "causing a recursive function to exceed the call stack size",
       "severity": 3,
-      "createdAt": 1542107359454
+      "createdAt": 1702999864556,
+      "labels": ["invalid"]
     },
     {
       "_id": "1112",
       "title": "Unexpected token in JSON at position 0",
       "description": "parsing JSON with a syntax error",
       "severity": 2,
-      "createdAt": 1542107359454
+      "createdAt": 1702999864556,
+      "labels": ["invalid", "testing-needed"]
     },
     {
       "_id": "1314",
       "title": "TypeError: Cannot set property 'value' of null",
       "description": "attempting to set a property on a null object",
       "severity": 2,
-      "createdAt": 1542107359454
+      "createdAt": 1702999864556,
+      "labels": ["invalid"]
     },
     {
       "_id": "1516",
       "title": "Uncaught ReferenceError: func is not defined",
       "description": "calling an undefined function",
       "severity": 1,
-      "createdAt": 1542107359454
+      "createdAt": 1702999864556,
+      "labels": ["invalid"]
     },
     {
       "_id": "1718",
       "title": "AssertionError: Expected 200, received 404",
       "description": "a test case failing due to unexpected HTTP response code",
       "severity": 3,
-      "createdAt": 1542107359454
+      "createdAt": 1702999864556,
+      "labels": ["invalid", "testing-needed"]
     },
     {
       "_id": "1920",
       "title": "TypeError: Cannot read property 'map' of undefined",
       "description": "calling 'map' on an undefined object",
       "severity": 2,
-      "createdAt": 1542107359454
+      "createdAt": 1702999864556,
+      "labels": ["critical","invalid"]
     },
     {
       "_id": "2122",
       "title": "Uncaught TypeError: document.querySelector(...) is null",
       "description": "attempting to query an element that doesn't exist",
       "severity": 1,
-      "createdAt": 1542107359454
+      "createdAt": 1702999864556,
+      "labels": ["critical", "testing-needed"]
     },
     {
       "_id": "2324",
       "title": "SyntaxError: Unexpected token '<'",
       "description": "attempting to import a non-JavaScript file as a module",
       "severity": 2,
-      "createdAt": 1542107359454
+      "createdAt": 1702999864556,
+      "labels": ["won't fix", "critical"]
     },
     {
       "_id": "2526",
       "title": "TypeError: Cannot read property 'length' of undefined",
       "description": "attempting to access 'length' property on an undefined object",
       "severity": 1,
-      "createdAt": 1542107359454
+      "createdAt": 1702999864556,
+      "labels": ["won't fix"]
     },
     {
       "_id": "2728",
       "title": "ReferenceError: module is not defined",
       "description": "using 'module' outside of a module context",
       "severity": 2,
-      "createdAt": 1542107359454
+      "createdAt": 1702999864556,
+      "labels": ["won't fix", "testing-needed"]
     },
     {
       "_id": "2930",
       "title": "Uncaught TypeError: undefined is not a function",
       "description": "calling 'undefined' as a function",
       "severity": 1,
-      "createdAt": 1542107359454
+      "createdAt": 1702999864556,
+      "labels": ["critical", "won't fix", "testing-needed"]
     }
   ]
+  
+
   
