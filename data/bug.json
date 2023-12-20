@@ -5,7 +5,11 @@
     "description": "problem when clicking Save",
     "severity": 3,
     "createdAt": 1702999864556,
-    "labels": ["critical", "testing-needed"]
+    "labels": ["critical", "testing-needed"],
+    "creator": {
+        "_id": "u101",
+        "fullname": "Puki Ja"
+              }
   },
   {
     "_id": "55443",
@@ -13,7 +17,11 @@
     "description": "problem when cars is not an array",
     "severity": 2,
     "createdAt": 1702999864556,
-    "labels": ["critical", "testing-needed"]
+    "labels": ["critical", "testing-needed"],
+    "creator": {
+        "_id": "u101",
+        "fullname": "Puki Ja"
+              }
   },
   {
     "_id": "33322",
@@ -21,7 +29,11 @@
     "description": "problem when not installing an npm library",
     "severity": 1,
     "createdAt": 1702999864556,
-    "labels": ["critical", "testing-needed"]
+    "labels": ["critical", "testing-needed"],
+    "creator": {
+        "_id": "u101",
+        "fullname": "Puki Ja"
+              }
   },
   {
     "_id": "777",
@@ -29,7 +41,11 @@
     "description": "not giving a key to a list item",
     "severity": 1,
     "createdAt": 1702999864556,
-    "labels": ["critical", "testing-needed"]
+    "labels": ["critical", "testing-needed"],
+    "creator": {
+        "_id": "u101",
+        "fullname": "Puki Ja"
+              }
   },
   {
     "_id": "888",
@@ -37,7 +53,11 @@
     "description": "not defining a variable before using it",
     "severity": 1,
     "createdAt": 1702999864556,
-    "labels": ["security", "testing-needed"]
+    "labels": ["security", "testing-needed"],
+    "creator": {
+        "_id": "u101",
+        "fullname": "Puki Ja"
+              }
   },
   {
     "_id": "999",
@@ -45,7 +65,11 @@
     "description": "calling a method on an undefined variable",
     "severity": 2,
     "createdAt": 1702999864556,
-    "labels": ["security"]
+    "labels": ["security"],
+    "creator": {
+        "_id": "u101",
+        "fullname": "Puki Ja"
+              }
   },
   {
     "_id": "1111",
@@ -53,7 +77,11 @@
     "description": "not handling a promise rejection",
     "severity": 3,
     "createdAt": 1702999864556,
-    "labels": ["security", "testing-needed"]
+    "labels": ["security", "testing-needed"],
+    "creator": {
+        "_id": "u101",
+        "fullname": "Puki Ja"
+              }
   },
   {
     "_id": "1234",
@@ -61,7 +89,11 @@
     "description": "using arrow functions in an unsupported environment",
     "severity": 2,
     "createdAt": 1702999864556,
-    "labels": ["security"]
+    "labels": ["security"],
+    "creator": {
+        "_id": "u101",
+        "fullname": "Puki Ja"
+              }
   },
   {
     "_id": "5678",
@@ -69,7 +101,11 @@
     "description": "accessing 'length' property on a null object",
     "severity": 2,
     "createdAt": 1702999864556,
-    "labels": ["critical", "testing-needed"]
+    "labels": ["critical", "testing-needed"],
+    "creator": {
+        "_id": "u101",
+        "fullname": "Puki Ja"
+              }
   },
   {
     "_id": "4321",
@@ -77,7 +113,11 @@
     "description": "unescaped user input in the HTML causing a potential XSS vulnerability",
     "severity": 3,
     "createdAt": 1702999864556,
-    "labels": ["critical"]
+    "labels": ["critical"],
+    "creator": {
+        "_id": "u101",
+        "fullname": "Puki Ja"
+              }
   },
   {
     "_id": "9876",
@@ -85,7 +125,11 @@
     "description": "attempting to fetch a resource that doesn't exist",
     "severity": 1,
     "createdAt": 1702999864556,
-    "labels": ["critical", "testing-needed"]
+    "labels": ["critical", "testing-needed"],
+    "creator": {
+        "_id": "u101",
+        "fullname": "Puki Ja"
+              }
   },
   {
     "_id": "6543",
@@ -93,7 +137,11 @@
     "description": "causing a recursive function to exceed the call stack size",
     "severity": 3,
     "createdAt": 1702999864556,
-    "labels": ["invalid"]
+    "labels": ["invalid"],
+    "creator": {
+        "_id": "u101",
+        "fullname": "Puki Ja"
+              }
   },
   {
     "_id": "1112",
@@ -101,7 +149,11 @@
     "description": "parsing JSON with a syntax error",
     "severity": 2,
     "createdAt": 1702999864556,
-    "labels": ["invalid", "testing-needed"]
+    "labels": ["invalid", "testing-needed"],
+    "creator": {
+        "_id": "u101",
+        "fullname": "Puki Ja"
+              }
   },
   {
     "_id": "1314",
@@ -109,7 +161,11 @@
     "description": "attempting to set a property on a null object",
     "severity": 2,
     "createdAt": 1702999864556,
-    "labels": ["invalid"]
+    "labels": ["invalid"],
+    "creator": {
+        "_id": "u101",
+        "fullname": "Puki Ja"
+              }
   },
   {
     "_id": "1516",
@@ -117,7 +173,11 @@
     "description": "calling an undefined function",
     "severity": 1,
     "createdAt": 1702999864556,
-    "labels": ["invalid"]
+    "labels": ["invalid"],
+    "creator": {
+        "_id": "u101",
+        "fullname": "Puki Ja"
+              }
   },
   {
     "_id": "1718",
@@ -125,7 +185,11 @@
     "description": "a test case failing due to unexpected HTTP response code",
     "severity": 3,
     "createdAt": 1702999864556,
-    "labels": ["invalid", "testing-needed"]
+    "labels": ["invalid", "testing-needed"],
+    "creator": {
+        "_id": "u101",
+        "fullname": "Puki Ja"
+              }
   },
   {
     "_id": "1920",
@@ -133,7 +197,11 @@
     "description": "calling 'map' on an undefined object",
     "severity": 2,
     "createdAt": 1702999864556,
-    "labels": ["critical","invalid"]
+    "labels": ["critical","invalid"],
+    "creator": {
+        "_id": "u101",
+        "fullname": "Puki Ja"
+              }
   },
   {
     "_id": "2122",
@@ -141,7 +209,11 @@
     "description": "attempting to query an element that doesn't exist",
     "severity": 1,
     "createdAt": 1702999864556,
-    "labels": ["critical", "testing-needed"]
+    "labels": ["critical", "testing-needed"],
+    "creator": {
+        "_id": "u101",
+        "fullname": "Puki Ja"
+              }
   },
   {
     "_id": "2324",
@@ -149,7 +221,11 @@
     "description": "attempting to import a non-JavaScript file as a module",
     "severity": 2,
     "createdAt": 1702999864556,
-    "labels": ["won't fix", "critical"]
+    "labels": ["won't fix", "critical"],
+    "creator": {
+        "_id": "u101",
+        "fullname": "Puki Ja"
+              }
   },
   {
     "_id": "2526",
@@ -157,7 +233,11 @@
     "description": "attempting to access 'length' property on an undefined object",
     "severity": 1,
     "createdAt": 1702999864556,
-    "labels": ["won't fix"]
+    "labels": ["won't fix"],
+    "creator": {
+        "_id": "u101",
+        "fullname": "Puki Ja"
+              }
   },
   {
     "_id": "2728",
@@ -165,7 +245,11 @@
     "description": "using 'module' outside of a module context",
     "severity": 2,
     "createdAt": 1702999864556,
-    "labels": ["won't fix", "testing-needed"]
+    "labels": ["won't fix", "testing-needed"],
+    "creator": {
+        "_id": "u101",
+        "fullname": "Puki Ja"
+              }
   },
   {
     "_id": "2930",
@@ -173,7 +257,11 @@
     "description": "calling 'undefined' as a function",
     "severity": 1,
     "createdAt": 1702999864556,
-    "labels": ["critical", "won't fix", "testing-needed"]
+    "labels": ["critical", "won't fix", "testing-needed"],
+    "creator": {
+        "_id": "u101",
+        "fullname": "Puki Ja"
+              }
   }
 ]
 

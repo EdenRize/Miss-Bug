@@ -10,6 +10,7 @@ export function BugPreview({ bug }) {
           return <li key={idx}>{label}</li>
         })}
       </h4>
+      <h3>Creator: {bug.creator.fullname}</h3>
       <h1>🐛</h1>
     </article>
   )

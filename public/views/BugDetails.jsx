@@ -18,7 +18,6 @@ export function BugDetails() {
       .get(params.bugId)
       .then(setBug)
       .catch((err) => {
-        console.log('params.bugId', params.bugId)
         showErrorMsg('Wait for a bit')
         setBug('Wait for a bit')
         setTimeout(() => {
@@ -30,7 +29,6 @@ export function BugDetails() {
 
   function onBack() {
     navigate('/bug')
-    // navigate(-1)
   }
 
   if (!bug) return <div>Loading...</div>
@@ -46,8 +44,8 @@ export function BugDetails() {
           return <li key={idx}>{label}</li>
         })}
       </h4>
+      <h3>Creator: {bug.creator.fullname}</h3>
       <h1>🐛</h1>
-      {/* <img src={`../assets/img/audu.png`} alt="" /> */}
       <p>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga, velit
         reiciendis sed optio eum saepe! Aliquid necessitatibus atque est quasi
