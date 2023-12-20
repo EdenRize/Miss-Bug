@@ -18,6 +18,7 @@ export function BugDetails() {
       .get(params.bugId)
       .then(setBug)
       .catch((err) => {
+        console.log('params.bugId', params.bugId)
         showErrorMsg('Wait for a bit')
         setBug('Wait for a bit')
         setTimeout(() => {
