@@ -24,7 +24,6 @@ export function BugIndex() {
   }
 
   function onRemoveBug(bugId) {
-    console.log('bugId', bugId)
     bugService
       .remove(bugId)
       .then(() => {

@@ -21,6 +21,7 @@ app.get('/api/bug', (req, res) => {
     sort: req.query.sort,
     labels: req.query.labels,
     pageIdx: req.query.pageIdx,
+    creatorId: req.query.creatorId,
   }
 
   bugService
@@ -63,6 +64,7 @@ app.post('/api/bug', (req, res) => {
     severity: req.body.severity,
     description: req.body.description,
     labels: req.body.labels,
+    creator: loggedinUser,
   }
 
   bugService
@@ -132,7 +134,11 @@ app.post('/api/auth/login', (req, res) => {
     if (user) {
       const loginToken = userService.getLoginToken(user)
       res.cookie('loginToken', loginToken)
-      res.send({ fullname: user.fullname, _id: user._id })
+      res.send({
+        fullname: user.fullname,
+        _id: user._id,
+        isAdmin: user.isAdmin,
+      })
     } else {
       res.status(401).send('Invalid Credentials')
     }

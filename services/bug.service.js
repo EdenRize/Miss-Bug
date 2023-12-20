@@ -32,6 +32,12 @@ function query(filterBy) {
     )
   }
 
+  if (filterBy.creatorId) {
+    bugsToReturn = bugsToReturn.filter(
+      (bug) => bug.creator._id === filterBy.creatorId
+    )
+  }
+
   if (filterBy.sort) {
     switch (filterBy.sort) {
       case 'txt':
@@ -83,7 +89,7 @@ function save(bug, loggedinUser) {
   } else {
     bug._id = utilService.makeId()
     bug.createdAt = Date.now()
-    car.creator = loggedinUser
+    bug.creator = loggedinUser
     bugs.unshift(bug)
   }
 

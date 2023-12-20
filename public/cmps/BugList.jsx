@@ -21,7 +21,7 @@ export function BugList({ bugs, onRemoveBug }) {
             <button>
               <Link to={`/bug/${bug._id}`}>Details</Link>
             </button>
-            {isCreator(bug) && (
+            {(isCreator(bug) || user.isAdmin) && (
               <div>
                 <button onClick={() => onRemoveBug(bug._id)}>Remove</button>
                 <button>

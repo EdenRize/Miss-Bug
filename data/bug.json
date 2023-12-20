@@ -1,5 +1,21 @@
 [
   {
+    "_id": "HoxwG",
+    "title": "newwwww",
+    "severity": 5,
+    "description": "the port above from various people it It ",
+    "labels": [
+      "need-CR",
+      "ui/ux",
+      "performance"
+    ],
+    "createdAt": 1703089438857,
+    "creator": {
+      "_id": "u102",
+      "fullname": "Muki Ba"
+    }
+  },
+  {
     "_id": "abc123",
     "title": "Cannot save a Car",
     "description": "problem when clicking Save",
@@ -212,6 +228,21 @@
     "createdAt": 1702999864556,
     "labels": [
       "invalid"
+    ],
+    "creator": {
+      "_id": "u101",
+      "fullname": "Puki Ja"
+    }
+  },
+  {
+    "_id": "1718",
+    "title": "AssertionError: Expected 200, received 404",
+    "description": "a test case failing due to unexpected HTTP response code",
+    "severity": 3,
+    "createdAt": 1702999864556,
+    "labels": [
+      "invalid",
+      "testing-needed"
     ],
     "creator": {
       "_id": "u101",
