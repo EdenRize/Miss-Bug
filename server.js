@@ -36,6 +36,13 @@ app.get('/api/bug', (req, res) => {
 // Get Bug (READ)
 app.get('/api/bug/:id', (req, res) => {
   const bugId = req.params.id
+
+  const { visitCountMap = [] } = req.cookies
+  console.log('visitCountMap', visitCountMap)
+  if (visitCountMap.length >= 3) return res.status(401).send('Wait for a bit')
+  if (!visitCountMap.includes(bugId)) visitCountMap.push(bugId)
+  res.cookie('visitCountMap', visitCountMap, { maxAge: 1000 * 7 })
+
   bugService
     .getById(bugId)
     .then((bug) => res.send(bug))

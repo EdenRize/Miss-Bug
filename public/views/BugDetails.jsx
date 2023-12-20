@@ -8,7 +8,6 @@ export function BugDetails() {
   const [bug, setBug] = useState(null)
   const params = useParams()
   const navigate = useNavigate()
-  console.log('params:', params)
 
   useEffect(() => {
     loadBug()
@@ -19,8 +18,11 @@ export function BugDetails() {
       .get(params.bugId)
       .then(setBug)
       .catch((err) => {
-        showErrorMsg(err)
-        navigate('/bug')
+        showErrorMsg('Wait for a bit')
+        setBug('Wait for a bit')
+        setTimeout(() => {
+          navigate('/bug')
+        }, 2500)
         console.log('Had issued in bug details:', err)
       })
   }
@@ -31,6 +33,7 @@ export function BugDetails() {
   }
 
   if (!bug) return <div>Loading...</div>
+  if (typeof bug === 'string') return <div>{bug}</div>
   return (
     <section className="bug-details">
       <h2>Bug Title: {bug.title}</h2>
