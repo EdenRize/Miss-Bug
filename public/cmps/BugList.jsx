@@ -12,6 +12,8 @@ export function BugList({ bugs, onRemoveBug }) {
     return user.isAdmin || bug.creator._id === user._id
   }
 
+  if (!bugs) return <div>Loading...</div>
+  if (!bugs.length) return <div>No bugs to preview</div>
   return (
     <ul className="bug-list clean-list">
       {bugs.map((bug) => (
@@ -21,7 +23,7 @@ export function BugList({ bugs, onRemoveBug }) {
             <button>
               <Link to={`/bug/${bug._id}`}>Details</Link>
             </button>
-            {(isCreator(bug) || user.isAdmin) && (
+            {user && (isCreator(bug) || user.isAdmin) && (
               <div>
                 <button onClick={() => onRemoveBug(bug._id)}>Remove</button>
                 <button>

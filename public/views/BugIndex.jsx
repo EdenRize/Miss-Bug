@@ -67,7 +67,6 @@ export function BugIndex() {
 
   const { txt, minSeverity, sort, labels, pageIdx } = filterBy
 
-  if (!bugs) return <div>Loading...</div>
   return (
     <section className="bug-index full main-layout">
       <section className="pagination">

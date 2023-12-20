@@ -14,6 +14,7 @@ import { BugEdit } from './views/BugEdit.jsx'
 import { BugIndex } from './views/BugIndex.jsx'
 import { Home } from './views/Home.jsx'
 import { UserDetails } from './views/UserDetails.jsx'
+import { UsersPage } from './views/UsersPage.jsx'
 
 export function App() {
   const [page, setPage] = useState('bug')
@@ -38,7 +39,8 @@ export function App() {
             <Route path="/bug/edit/:bugId" element={<BugEdit />} />
             <Route path="/bug/edit" element={<BugEdit />} />
             <Route path="/bug" element={<BugIndex />} />
-            <Route path="/user" element={<UserDetails />} />
+            <Route path="/user/:userId" element={<UserDetails />} />
+            <Route path="/users" element={<UsersPage />} />
           </Routes>
         </main>
         <UserMsg />

@@ -1,4 +1,4 @@
-const {Outlet, NavLink} = ReactRouterDOM
+const { Outlet, NavLink } = ReactRouterDOM
 
 export function About() {
   const navStyle = {
@@ -9,7 +9,7 @@ export function About() {
 
   return (
     <section className="about">
-      <h1>About cars and us...</h1>
+      <h1>About Miss Bug</h1>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas doloremque
         magnam porro perferendis eos fugit. Dolorum asperiores ducimus quisquam.

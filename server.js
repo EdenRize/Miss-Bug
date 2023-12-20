@@ -116,6 +116,19 @@ app.delete('/api/bug/:id', (req, res) => {
 })
 
 // AUTH API
+app.get('/api/user/:id', (req, res) => {
+  const userId = req.params.id
+  userService
+    .getById(userId)
+    .then((user) => {
+      res.send(user)
+    })
+    .catch((err) => {
+      console.log('Cannot load user', err)
+      res.status(400).send('Cannot load user')
+    })
+})
+
 app.get('/api/user', (req, res) => {
   userService
     .query()
@@ -134,11 +147,7 @@ app.post('/api/auth/login', (req, res) => {
     if (user) {
       const loginToken = userService.getLoginToken(user)
       res.cookie('loginToken', loginToken)
-      res.send({
-        fullname: user.fullname,
-        _id: user._id,
-        isAdmin: user.isAdmin,
-      })
+      res.send(user)
     } else {
       res.status(401).send('Invalid Credentials')
     }
@@ -161,6 +170,18 @@ app.post('/api/auth/signup', (req, res) => {
 app.post('/api/auth/logout', (req, res) => {
   res.clearCookie('loginToken')
   res.send('logged-out!')
+})
+
+// Remove User (DELETE)
+app.delete('/api/user/:id', (req, res) => {
+  const userId = req.params.id
+  userService
+    .remove(userId)
+    .then(() => res.send(userId))
+    .catch((err) => {
+      loggerService.error('User owns bugs', err)
+      res.status(400).send('User owns bugs')
+    })
 })
 
 // app.get('/**', (req, res) => {

@@ -16,21 +16,6 @@
     }
   },
   {
-    "_id": "abc123",
-    "title": "Cannot save a Car",
-    "description": "problem when clicking Save",
-    "severity": 3,
-    "createdAt": 1702999864556,
-    "labels": [
-      "critical",
-      "testing-needed"
-    ],
-    "creator": {
-      "_id": "u101",
-      "fullname": "Puki Ja"
-    }
-  },
-  {
     "_id": "55443",
     "title": "cars.map is not a function",
     "description": "problem when cars is not an array",

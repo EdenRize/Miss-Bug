@@ -1,8 +1,8 @@
 export function Home() {
-    return (
-        <section className="home">
-            <h1>Welcome To Car's R Us!</h1>
-            <img src="../assets/img/react.png" alt="" />
-        </section>
-    )
+  return (
+    <section className="home">
+      <h1>Welcome To Miss Bug!</h1>
+      <img src="../assets/img/react.png" alt="" />
+    </section>
+  )
 }
