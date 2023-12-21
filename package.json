@@ -2,7 +2,7 @@
   "name": "proj-node-server",
   "version": "1.0.0",
   "description": "bug server REST API",
-  "main": "simple-server.js",
+  "main": "server.js",
   "scripts": {
     "start": "node server.js",
     "dev": "nodemon --ignore \"./data\" server.js",
