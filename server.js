@@ -186,7 +186,7 @@ app.delete('/api/user/:id', (req, res) => {
 })
 
 app.get('/**', (req, res) => {
-  res.sendFile(path.resolve('public/index.html'))
+  res.sendFile(path.resolve('public/'))
 })
 
 // Listen will always be the last line in our server!
