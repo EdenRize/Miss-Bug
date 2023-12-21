@@ -1,18 +1,22 @@
 .main-layout {
-    display: grid;
-    grid-template-columns: 1.6rem 1fr 1.6rem;
+  display: grid;
+  grid-template-columns: 1.6rem 1fr 1.6rem;
 }
 
 .main-layout > * {
-    grid-column: 2;
+  grid-column: 2;
 }
 
 .main-layout .full {
-    grid-column: 1/-1;
+  grid-column: 1/-1;
 }
 
 .container {
-    max-width: 800px;
-    padding: 1em;
-    margin: auto;
+  max-width: 800px;
+  padding: 1em;
+  margin: auto;
+}
+
+.page {
+  margin-block-end: 20px;
 }

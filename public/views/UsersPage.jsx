@@ -36,7 +36,7 @@ export function UsersPage() {
   }
 
   return (
-    <section className="users-page">
+    <section className="users-page page">
       <h1>Users Page</h1>
       <UserList users={users} onRemoveUser={onRemoveUser} />
     </section>

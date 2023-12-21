@@ -68,7 +68,7 @@ export function BugIndex() {
   const { txt, minSeverity, sort, labels, pageIdx } = filterBy
 
   return (
-    <section className="bug-index full main-layout">
+    <section className="bug-index full main-layout page">
       <section className="pagination">
         <button onClick={() => onChangePageIdx(1)}>+</button>
         {pageIdx + 1 || 'No Pagination'}

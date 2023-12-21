@@ -34,7 +34,7 @@ export function BugDetails() {
   if (!bug) return <div>Loading...</div>
   if (typeof bug === 'string') return <div>{bug}</div>
   return (
-    <section className="bug-details">
+    <section className="bug-details page">
       <h2>Bug Title: {bug.title}</h2>
       <h4>Description: {bug.description}</h4>
       <h4>Severity: {bug.severity}</h4>

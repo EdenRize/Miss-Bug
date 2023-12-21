@@ -48,7 +48,7 @@ export function UserDetails() {
 
   if (!user) return <div>Loading...</div>
   return (
-    <section className="user-details full main-layout">
+    <section className="user-details full main-layout page">
       <h1>user details</h1>
       <h2>Full Name: {user.fullname}</h2>
       <h3>{`${user.fullname}'s Bugs:`}</h3>

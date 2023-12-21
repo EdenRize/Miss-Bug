@@ -40,7 +40,7 @@ export function BugEdit() {
   const { title, description, severity } = bugToEdit
 
   return (
-    <section className="bug-edit">
+    <section className="bug-edit page">
       <h2>{bugToEdit._id ? 'Edit' : 'Add'} Bug</h2>
 
       <form onSubmit={onSaveBug}>

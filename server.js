@@ -1,5 +1,6 @@
 import express from 'express'
 import cookieParser from 'cookie-parser'
+import path from 'path'
 
 import { bugService } from './services/bug.service.js'
 import { userService } from './services/user.service.js'
@@ -184,9 +185,9 @@ app.delete('/api/user/:id', (req, res) => {
     })
 })
 
-// app.get('/**', (req, res) => {
-//   res.sendFile(path.resolve('public/index.html'))
-// })
+app.get('/**', (req, res) => {
+  res.sendFile(path.resolve('public/index.html'))
+})
 
 // Listen will always be the last line in our server!
 const PORT = 3031
