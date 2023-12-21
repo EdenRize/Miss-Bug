@@ -31,10 +31,10 @@ export function App() {
         <main className="main-layout full">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />}>
-              <Route path="team" element={<Team />} />
+            <Route path="/about" element={<About />} />
+            {/* <Route path="team" element={<Team />} />
               <Route path="vision" element={<Vision />} />
-            </Route>
+            </Route> */}
             <Route path="/bug/:bugId" element={<BugDetails />} />
             <Route path="/bug/edit/:bugId" element={<BugEdit />} />
             <Route path="/bug/edit" element={<BugEdit />} />
