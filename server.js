@@ -186,8 +186,14 @@ app.delete('/api/user/:id', (req, res) => {
 })
 
 app.get('/**', (req, res) => {
-  res.sendFile(path.resolve('public/'))
+  res.sendFile(path.resolve('public/index.html'))
 })
+
+const corsOptions = {
+  origin: ['http://127.0.0.1:3031', 'http://localhost:3031'],
+  credentials: true,
+}
+app.use(cors(corsOptions))
 
 // Listen will always be the last line in our server!
 const PORT = 3031
