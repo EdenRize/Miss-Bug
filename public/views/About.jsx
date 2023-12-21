@@ -16,13 +16,11 @@ export function About() {
         Fugiat magnam dolores illum laboriosam, nostrum minima accusamus beatae
         dicta nemo!
       </p>
-      <nav style={navStyle}>
+      {/* <nav style={navStyle}>
         <NavLink to="/about/team">Team</NavLink>
         <NavLink to="/about/vision">Vision</NavLink>
-      </nav>
-      <section className="flex justify-center">
-        <Outlet />
-      </section>
+      </nav> */}
+      {/* <section className="flex justify-center"><Outlet /></section> */}
     </section>
   )
 }
